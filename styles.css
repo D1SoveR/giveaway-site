@@ -1,0 +1,73 @@
+h1, h2, h3 {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+
+header h1,
+main > section h2 {
+	border-bottom: 2px solid #CCC;
+	margin: 0 0 12px;
+	padding: 0 0 4p
+}
+
+html {
+	background: #F5F5F5;
+	font-size: 14px;
+}
+body {
+	display: block;
+	border-sizing: border-box;
+	margin: 0 auto;
+	padding: 16px;
+	max-width: 800px;
+	background: white;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+
+header {
+	margin-bottom: 24px;
+}
+header .name {
+	font-size: 1.2em;
+	letter-spacing: -0.05em;
+	text-transform: uppercase;
+}
+header p {
+	margin: 0 0 4px;
+}
+
+nav,
+nav ul,
+nav li,
+nav a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+nav {
+	width: 184px;
+	padding-top: 6px;
+	float: left;
+}
+nav.floating {
+	position: fixed;
+	top: 0;
+}
+nav a {
+	padding: 6px;
+	margin-bottom: 6px;
+	color: #333;
+	background: #DDD;
+}
+nav a:hover,
+nav a:active {
+	color: white;
+	background: #666;
+}
+
+main {
+	margin-left: 200px;
+}
