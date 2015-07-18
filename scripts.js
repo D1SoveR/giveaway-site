@@ -2,6 +2,10 @@
 (function () {
 	"use strict";
 
+	function arr(obj) {
+		return Array.prototype.slice.call(obj);
+	}
+
 	function documentOffsetTop(el) {
 		var offsetTop = 0;
 		do {
@@ -94,8 +98,33 @@
 
 	};
 
+	var contactExpansion = {
+
+		contactElements: null,
+
+		replaceContactLink: function (el, event) {
+			event.preventDefault();
+			el.parentNode.replaceChild(this.contactElements.cloneNode(true), el);
+		},
+
+		initExpansion: function () {
+
+			this.contactElements = document.createDocumentFragment();
+			arr(document.querySelectorAll('address a')).forEach(function (el) {
+				var clone = el.cloneNode(true);
+				this.contactElements.appendChild(clone);
+			}, this);
+
+			arr(document.querySelectorAll('main .contact a[href="#contact"]')).forEach(function(el) {
+				el.addEventListener('click', this.replaceContactLink.bind(this, el), false);
+			}, this);
+		}
+
+	};
+
 	function init() {
 		navScrolling.initChecks();
+		contactExpansion.initExpansion();
 	}
 
 	if (document.readyState !== 'loading') {
