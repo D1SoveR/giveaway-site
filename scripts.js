@@ -84,7 +84,13 @@
 		navOffsetTop: Infinity,
 
 		checkForFixed: function () {
-			if (document.body.scrollTop > this.navOffsetTop) {
+
+			var docScroll = Math.max(
+				document.body.scrollTop,
+				document.documentElement.scrollTop
+			);
+
+			if (docScroll > this.navOffsetTop) {
 				addClass(this.navElement, 'floating');
 			} else {
 				removeClass(this.navElement, 'floating');
