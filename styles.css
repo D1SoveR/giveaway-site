@@ -98,6 +98,16 @@ main section section h3 {
 	font-size: 20px
 }
 
+main section section table {
+	margin: 0 0 8px;
+}
+main section section table th {
+	padding: 0 12px 6px 0;
+}
+main section section table td {
+	padding: 0 0 6px;
+}
+
 /* CONTENT WARNING */
 main .contentWarning {
 	border: 1px solid #999;
@@ -149,9 +159,9 @@ main .contentWarning:target > section {
 }
 
 footer {
-	overflow: hidden;
 	border-top: 2px solid #CCC;
 	margin: 12px 0 0;
+	overflow: hidden;
 	padding: 12px 0 0;
 }
 footer address {
