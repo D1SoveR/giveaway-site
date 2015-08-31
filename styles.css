@@ -74,6 +74,7 @@ main section > .contentWarning {
 	margin: 24px 0;
 }
 main section section {
+    position: relative;
 	padding: 16px;
 	overflow: hidden;
 	text-align: justify;
@@ -82,6 +83,21 @@ main section section {
 }
 main section section > * {
 	margin-left: 166px
+}
+main section section.claimed::after {
+    content: 'Claimed';
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+
+    padding-top: 40px;
+    text-align: center;
+
+    color: #AAA;
+    font-size: 48px;
+    font-weight: bold;
+
+    background: rgba(255, 255, 255, 0.9);
 }
 main section section .images {
 	float: left;
