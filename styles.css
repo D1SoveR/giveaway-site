@@ -103,6 +103,7 @@ main section section table {
 }
 main section section table th {
 	padding: 0 12px 6px 0;
+	vertical-align: top;
 }
 main section section table td {
 	padding: 0 0 6px;
